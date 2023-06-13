@@ -1,0 +1,23 @@
+.panel-under {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.panel__under-controlls{
+    margin-right: 10px;
+    color: yellow;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+};
+.panel__under-wrapper{
+    border: 5px solid #ff9900;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.panel__under-element{
+    flex: 0 1 auto;
+    margin: 5px 0 0 10px;
+    transition: 100ms all ease;
+}

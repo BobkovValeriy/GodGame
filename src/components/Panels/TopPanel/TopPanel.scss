@@ -1,0 +1,30 @@
+.panel-top {
+}
+.panel__top-resources{
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 76px;
+    background-color: #199CFF;
+    border: solid;
+    border-color: #5e5373;
+    border-radius: 6px;
+};
+.date {
+    height: 100%;
+    width: 100%;
+    color: #FF0DEB;
+    font-size: 20px;
+    text-align: center;
+}
+.resources {
+    height: 100%;
+    width: 100%;
+    background-color: #ff9900;
+    color: #5e5373;
+    font-size: 20px;
+    text-align: center;
+}
