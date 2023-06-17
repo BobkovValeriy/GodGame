@@ -7,6 +7,10 @@ import reportWebVitals from './reportWebVitals';
 import data from './store/data';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+
+
 root.render(
   <React.StrictMode>
     <Provider store={data}>

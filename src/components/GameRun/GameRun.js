@@ -22,7 +22,7 @@ function GameRun() {
     const gameRunFunc = function () {
         if (gameRunStatus) {
             dispatch(changeGameRunStatus());
-            clearInterval(mainInterval);
+            //clearInterval(mainInterval);
         } else {
             dispatch(changeGameRunStatus());
         }

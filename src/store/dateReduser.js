@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const dateReducer = createSlice({
-    name: "gameDate",
+    name: "game date",
     initialState: {
         date: 0,
     },

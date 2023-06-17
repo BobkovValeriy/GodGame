@@ -1,6 +1,7 @@
 import { BsFillMenuButtonFill, BsFillMenuButtonWideFill } from "react-icons/bs"
 import { useDispatch, useSelector } from 'react-redux';
 import { changeMenuVisible } from '../../../../store/menuReducer'
+import { gameStop } from '../../../../store/gameRunReducer'
 import React from "react"
 import "./MenuBtn.scss"
 
@@ -9,11 +10,8 @@ function MenuBtn() {
     const menuVisible = useSelector(state => state.menu.menuStatus);
 
     function showMenu() {
-        if (menuVisible) {
-            dispatch(changeMenuVisible());
-        } else {
-            dispatch(changeMenuVisible());
-        }
+        dispatch(changeMenuVisible());
+        dispatch(gameStop());
     }
 
     return (

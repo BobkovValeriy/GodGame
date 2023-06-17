@@ -2,16 +2,6 @@
 .menu__button-open{
     color: yellow
 }
-.menuModal{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: none;
-    background: rgba(0,0,0, 0.5);
-}
-
 .menuModal__content {
     padding: 25px;
     background: white;
