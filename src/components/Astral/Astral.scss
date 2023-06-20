@@ -1,0 +1,35 @@
+html, body, #root {
+    height: 100%;
+}
+.astral-wrapper{
+    position: fixed;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(37, 60, 162, 0.5);
+    z-index: 9999;
+}
+.astral-field{
+    width: 80%;
+    height: 80%;
+    border-radius: 7%;
+    background-color: rgb(23, 56, 202);
+    color: white;
+    flex-direction: column;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.astral-field-entity{
+    width: 160px;
+    border: 3px solid #5e5373;
+    font-size: large;
+    color: #FF0DEB;
+    background-color: #ff9900;
+    margin-top: 10px;
+    cursor: pointer;
+}

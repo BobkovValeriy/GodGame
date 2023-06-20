@@ -11,7 +11,7 @@ html, body, #root {
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-
+    z-index: 9999;
 }
 .menu-punkts{
     width: 300px;
@@ -31,4 +31,5 @@ html, body, #root {
     color: #FF0DEB;
     background-color: #ff9900;
     margin-top: 10px;
+    cursor: pointer;
 }
