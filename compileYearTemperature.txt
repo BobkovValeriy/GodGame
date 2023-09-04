@@ -1,0 +1,33 @@
+const solarConstant = 1367; // Солнечная постоянная, Вт/м²
+const albedo = 0.3; // Альбедо Земли
+const surfaceAbsorption = 0.7; // Коэффициент поглощения поверхности Земли
+const atmosphereAbsorption = 0.3; // Коэффициент поглощения атмосферы
+const surfaceFlux = solarConstant * (1 - albedo) * surfaceAbsorption; // Поток энергии, поглощаемый поверхностью Земли, Вт/м²
+const atmosphereFlux = solarConstant * (1 - albedo) * atmosphereAbsorption; // Поток энергии, поглощаемый атмосферой, Вт/м²
+const totalFlux = surfaceFlux + atmosphereFlux; // Общий поток энергии, поглощаемый Землей, Вт/м²
+const earthRadius = 6371; // Радиус Земли, км
+const earthSurfaceArea = 4 * Math.PI * Math.pow(earthRadius, 2); // Полная поверхность Земли, км²
+const absorbedEnergy = totalFlux * earthSurfaceArea * 1e6; // Поглощенная энергия, МВт
+const heatCapacity = 4.18e6; // Удельная теплоемкость воздуха, Дж/(кг*°C)
+const atmosphereMass = 5.15e18; // Масса атмосферы, кг
+const temperatureIncrease = absorbedEnergy / (heatCapacity * atmosphereMass); // Повышение температуры атмосферы, °C
+
+let S = solarConstant * (1 - albedo/100); //Сначала рассчитаем солнечную постоянную S
+
+let emissivity = 0.95
+
+const stefBoltz = 5.670373 * Math.pow(10, -8); 
+
+let surfaceTemperature = Math.pow((surfaceFlux / (stefBoltz * emissivity)), 1/4); // Затем рассчитаем температуру поверхности Земли:
+
+let atmTemperature = Math.pow((S * (1 - albedo) / (4 * stefBoltz)), 1/4); // Далее рассчитаем температуру атмосферы:
+
+let avgTemperature = ((surfaceTemperature ** 4 + 2 * (surfaceTemperature ** 2) * atmTemperature ** 2 + atmTemperature ** 4) / 4) ** (1/4); // И среднегодовую температуру
+
+let avgTemperatureCelcius = Math.round(avgTemperature - 273.15);
+
+console.log(`Средний поток энергии, поглощаемый Землей: ${totalFlux.toFixed(2)} Вт/м²`);
+console.log(`Поглощенная энергия Землей: ${absorbedEnergy.toFixed(2)} МВт`);
+console.log(`Повышение температуры атмосферы: ${temperatureIncrease.toFixed(2)} °C`);
+console.log(`Среднегодовая температура ${avgTemperature}`);
+console.log(`Среднегодовая температура в ${avgTemperatureCelcius} °C`);

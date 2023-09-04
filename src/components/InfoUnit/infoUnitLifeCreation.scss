@@ -1,0 +1,26 @@
+.info__unit-life-wrapper {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Плитки автоматически адаптируются */
+    grid-gap: 10px;
+}
+
+.info__unit-life-title {
+    color: white;
+    grid-column: 1 / -1; /* Занимает все доступные колонки */
+    //background-color: #B299B7;
+}
+.info__unit-life-value {
+    width: 80%; /* Это значение будет заменено автоматически, так как установлено minmax(100px, 1fr) */
+    height: 50px; /* Вы можете задать желаемую высоту здесь */
+    background-color: #B299B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 3px solid #ff9900;
+}
+.movable-button-img{
+    width: 100%;
+    height: 40px;
+}

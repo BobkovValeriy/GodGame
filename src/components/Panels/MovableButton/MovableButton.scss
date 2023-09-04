@@ -1,0 +1,33 @@
+.movable-button {
+    margin: 0 0 10px 0;
+    display: flex;
+    position: relative;
+    width: 12%;
+    border-radius: 25%;
+    font-size: large;
+    align-items: center; 
+    justify-content: center;
+    cursor: grab;
+    width: 80%;
+    height: 40px;
+    background-color: #B299B7;
+    color: white;
+    border: 3px solid #ff9900;
+    overflow: hidden;
+}
+
+.movable-button-tooltip {
+    margin: 0 10px;
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    width: 200px;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    opacity: 0.9;
+    z-index: 100;
+}

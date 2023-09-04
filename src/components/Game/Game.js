@@ -2,7 +2,6 @@ import { useMemo } from 'react';
 //, useEffect, useRef 
 
 import './Game.scss'
-import { CreateNewTerraPlanetoid } from '../../utils/planetoids'
 import TopPanel from '../Panels/TopPanel/TopPanel';
 import GameField from '../Gamefield/GameField';
 import UnderPanel from '../Panels/UnderPanel/UnderPanel';
@@ -11,24 +10,24 @@ import Menu from '../Menu/Menu'
 import GameRun from '../GameRun/GameRun';
 import { MainTheme } from '../Sounds/MainTheme';
 import Astral from '../Astral/Astral';
+import LifeCreationMenu from '../LifeCreation/LifeCreationMenu'
 
-function Game(
-    playerEnergy,
-    changePlayerEnergy,
-    playerName
-) {
+function Game(playerEnergy) {
+    const playerName = useSelector(state => state.playerReducer.name);
     const astralVisible = useSelector(state => state.astralReducer.astralStatus)
     const menuVisible = useSelector(state => state.menu.menuStatus);
-    const playerPlanetoid = useMemo(() => new CreateNewTerraPlanetoid(playerEnergy, playerName), [])
+    const showLifeCreation = useSelector(state => state.lifeCreationReducer.showLifeCreationMenu);
+
 
     return (
         <div className="wrapper">
             <MainTheme>
                 {menuVisible ? <Menu /> : null}
                 {astralVisible ? <Astral /> : null}
+                {showLifeCreation ? <LifeCreationMenu /> : null}
                 <GameRun />
                 <TopPanel />
-                <GameField playerPlanetoid={playerPlanetoid} />
+                <GameField />
                 <UnderPanel />
             </MainTheme>
         </div>

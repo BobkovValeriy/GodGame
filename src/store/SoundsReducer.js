@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import audio from "../track/cosmic_breath.mp3";
+import audio from '../track/cosmic_breath.mp3'
 
 const soundsReducer = createSlice({
     name: "sounds",

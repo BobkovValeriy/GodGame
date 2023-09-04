@@ -1,0 +1,39 @@
+.player__form{
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player__form-container{
+    color: yellow;
+}
+.pass-block{
+    display: flex;
+}
+.registerbtn {
+    background-color: aquamarine;
+    width: 400px;
+    height: 80px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 10px 20% 0 20%;
+}
+.login-lang-switch{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.switch-btn{
+    width: 240px;
+    background-color: aquamarine;
+    border-radius: 15px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.warning{
+    color: red;
+}

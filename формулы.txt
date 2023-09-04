@@ -1,0 +1,73 @@
+// универсальный температурный множитель роста популяции.
+const birthTemperatureMultiplier = function(currentTemperature, optimalTemperature, minOptimalTemperature, maxOptimalTemperature) {
+    if (currentTemperature > maxOptimalTemperature || currentTemperature < minOptimalTemperature) {
+        return 0;
+    } else {
+        const temperatureRange = maxOptimalTemperature - minOptimalTemperature;
+        const coefficient = Math.abs(currentTemperature - optimalTemperature) / temperatureRange;
+        return 1 - coefficient;
+    }
+};
+//Множитель доступности дыхательного газа
+const atmosphereGassLevel <= planetoid.atmosphere.typeOfGassLevel
+
+const respiratoryGasAvailabilityMultiplier = function(typeOfGass, gassMinLevel, atmosphereGassLevel){
+	if(gassMinLevel >= atmosphereGassLevel){
+	return 1
+	}else{
+	return 0
+}
+
+//Универсальный множитель конкурентного превосходства
+const lifeFormCompetitionStrength <= LifeForm.typeOfFeed, LifeForm.strength
+const competitiveAdvantageMultiplier = function(lifeFormCompetitionStrength , environmentCompetition){
+
+	if(lifeFormCompetitionStrength >= environmentCompetition){
+
+		return 1;
+	}
+	else{
+
+		return (lifeFormCompetitionStrength/environmentCompetition).toFixed(2)
+	}
+
+}
+// Универсальная формула доступности питания в среде
+const foodAvailabilityMultiplier = function(lifeFormFeedConsumption, lifeFormFeedGeneration){
+	if(lifeFormFeedGeneration >= lifeFormFeedConsumption){
+
+		return 1;
+	}
+	else{
+
+		return (lifeFormFeedConsumption/lifeFormFeedGeneration).toFixed(2)
+}
+
+
+}
+
+// Универсальная формула прироста популяции
+const birthRate <= LifeForm.birthRate
+const  populationGrowth = function (birthRate, birthTemperatureMultiplier, competitiveAdvantageMultiplier, foodAvailabilityMultiplier){
+	return birthRate * birthTemperatureMultiplier * competitiveAdvantageMultiplier * foodAvailabilityMultiplier;
+}
+
+// Формула максимальной скорости распостранения популяции
+const lifeFormSize <= LifeForm.typeOfBody
+const speedOfLifeForm <= LifeForm.typeOfMotion
+const populationSpread = function (populationGrowth, lifeFormSize, speedOfLifeform) {
+  const velocityMassRatio = Math.max(Math.floor(speedOfLifeform / lifeFormSize), 1);
+  
+  const maxSpreadFromSpeed = function(velocityMassRatio, lifeFormSize) {
+    const neighboringTiles = 8;
+    let maxNeighboringTiles = neighboringTiles * lifeFormSize;
+    let exponent = 2;
+    for (let i = 2; i <= velocityMassRatio; i++) {
+      maxNeighboringTiles += neighboringTiles * lifeFormSize * exponent;
+      exponent += 1;
+    }
+    return maxNeighboringTiles;
+  };
+  
+  return Math.min(maxSpreadFromSpeed(velocityMassRatio, lifeFormSize), populationGrowth * lifeFormSize);
+};

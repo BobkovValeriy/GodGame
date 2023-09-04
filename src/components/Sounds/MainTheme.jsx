@@ -1,12 +1,12 @@
 import { useEffect, createContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { changePlayMainTheme } from "../../store/SoundsReducer";
+// import audio from '../../track/cosmic_breath.mp3'
 
 const MusicContext = createContext();
 
 export const MainTheme = ({ children }) => {
-
-    const mainTheme = useSelector(state => state.soundsReducer.mainTheme)
+    const mainTheme = useSelector(state => state.soundsReducer.mainTheme);
     const playMainTheme = useSelector(state => state.soundsReducer.playMainTheme);
     const dispatch = useDispatch()
 

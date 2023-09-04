@@ -4,13 +4,13 @@ const energyReducer = createSlice({
     name: "player energy",
     initialState: {
         playerEnergy: 0,
-        playerEnergyProduction: 10,
+        playerEnergyProduction: 20,
         playerEnergyConsumption: 0,
-        energyDifference: 10,
+        energyDifference: 20,
     },
     reducers: {
         energyChange(state, action) {
-            state.energy += action.payload
+            state.energy += state.energyDifference
         },
         energyProductionChange(state, action) {
             state.playerEnergyProduction += action.payload;

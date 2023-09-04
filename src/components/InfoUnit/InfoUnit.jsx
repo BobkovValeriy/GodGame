@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import './InfoUnit.scss'
+import LocalizedText from "../../locales/LocalizedText"
+import './InfoUnit.scss';
 
 function InfoUnit({ title, infoObject }) {
     const [showInfo, changeShowInfo] = useState(false);
-    const infoMassive = Object.values(infoObject);
+    const infoEntries = Object.entries(infoObject);
 
     function toggleShowInfo() {
         changeShowInfo(!showInfo);
@@ -13,13 +14,14 @@ function InfoUnit({ title, infoObject }) {
         <div className="info__unit-wrapper">
             <div className="info__unit-title" onClick={toggleShowInfo}>{title}</div>
             {showInfo ? (
-                infoMassive.map((el, idx) => (
-                    <div className="info__unit-unit" key={idx}>
-                        {el}
+                infoEntries.map(([key, value]) => (
+                    <div className="info__unit-unit" key={key}>
+                        <span className="info__unit-key"><LocalizedText textKey={`${key}`} /> {value}</span>
                     </div>
                 ))
             ) : null}
         </div>
     )
 }
-export default InfoUnit
+
+export default InfoUnit;

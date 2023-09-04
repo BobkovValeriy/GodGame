@@ -1,10 +1,10 @@
 import GameRunButtons from '../../Panels/PanelsButtons/GameRunButtons/GameRunButtons';
-import PanelUnderControlls from "../PnaelUnderControlls/PanelUnderControlls";
+import PanelUnderControlls from "../PanelUnderControlls/PanelUnderControlls";
 import "./UnderPanel.scss"
 import MenuBtn from "../PanelsButtons/MenuBtn/MenuBtn"
 import AstralBtn from "../PanelsButtons/Astral/AstralBtn.jsx";
-import CreateAstralEntity from "../PanelsButtons/CreateAstralEntity/CreateAstralEntity";
 import MainThemeButton from '../PanelsButtons/MainTheme/MainThemeButton';
+import CreateLifeBtn from '../PanelsButtons/CreateLife/CreateLifeBtn';
 
 function UnderPanel() {
 
@@ -21,7 +21,7 @@ function UnderPanel() {
             <PanelUnderControlls>
                 <div className="panel__under-wrapper">
                     <AstralBtn />
-                    <CreateAstralEntity />
+                    <CreateLifeBtn />
                 </div>
             </PanelUnderControlls>
             <GameRunButtons />

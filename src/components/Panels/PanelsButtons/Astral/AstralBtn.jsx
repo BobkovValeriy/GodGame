@@ -9,10 +9,9 @@ function AstralBtn() {
     const lookAstral = useSelector(state => state.astralReducer.astralStatus);
     const dispatch = useDispatch();
 
-
     function showAstral() {
-        dispatch(changeAstralVisible());
         dispatch(gameStop());
+        dispatch(changeAstralVisible());
     }
 
     return (

@@ -1,0 +1,50 @@
+.greeting-wrapper{
+    width: 60%;
+}
+.langague-switch-header{
+    color: yellow;
+    text-align: center;
+}
+.langague-switcher{
+    height: 110px;
+    background-color: rgba(127, 255, 212, 0.5);
+    display: flex;
+    text-align: center;
+    justify-content:space-evenly;
+    border: 3px solid orange;
+    border-radius: 11px;
+    margin: 10px 0;
+}
+.langague{
+    cursor: pointer;
+}
+.langague-ru{
+    flex: 0 0 100px;
+    background: url('/img/lang/ru.png') no-repeat;
+    text-align: center;
+}
+.langague-en{
+    flex: 0 0 100px;
+    background: url('/img/lang/en.png') no-repeat;
+    text-align: center;
+}
+.login-registration{
+    display: flex;
+    flex-direction: column;
+}
+.login-registration-header{
+    color: yellow;
+}
+.login-registration-switchers{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 20px;
+}
+.login-registration-button{
+    width: 240px;
+    background-color: aquamarine;
+    border-radius: 15px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}

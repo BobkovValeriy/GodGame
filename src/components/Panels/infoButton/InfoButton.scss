@@ -1,0 +1,30 @@
+.info-button {
+  margin: 0 0 10px 0;
+  display: flex;
+  position: relative;
+  width: 12%;
+  border: 3px solid #5e5373;
+  border-radius: 25%;
+  font-size: large;
+  color: #FF0DEB;
+  background-color: #ff9900;
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tooltip {
+    margin: 0 10px;
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    width: 200px;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    opacity: 0.9;
+    z-index: 100;
+}

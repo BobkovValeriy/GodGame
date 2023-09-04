@@ -1,6 +1,14 @@
 // @import "nullfile.scss";
+body, html {
+    user-select: none;
+}
 .main{
     height: 100vh;
     background-image: url('/img/gameField.jpg');
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
 };

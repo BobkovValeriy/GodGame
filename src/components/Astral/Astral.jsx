@@ -1,11 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeAstralVisible } from "../../store/astralReducer";
+import { useTexts } from "../../locales/langagueSwitch";
 import "./Astral.scss"
 
 
 function Astral() {
-    const lookAstral = useSelector(state => state.astralReducer.astralStatus);
     const dispatch = useDispatch();
 
     function showAstral() {
@@ -15,7 +15,7 @@ function Astral() {
         <div className="astral-wrapper">
             <div className="astral-field">
                 <button className="astral-field-entity" onClick={showAstral}>
-                    В физический мир
+                    {useTexts('backToFizik')}
                 </button>
             </div>
         </div>
