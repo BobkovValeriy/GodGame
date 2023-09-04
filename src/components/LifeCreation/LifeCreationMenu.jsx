@@ -43,7 +43,7 @@ function LifeCreationMenu() {
         title: textLoc[key],
         infoObject: lifeFormDetails[key]
     })));
-
+    ///asdgagasdg
     useEffect(() => {
         const newSystems = lifeFormDetailsKeys.map(key => ({
             title: textLoc[key],
