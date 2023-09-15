@@ -31,7 +31,7 @@ function InfoUnitLifeCreation({ title, infoObject, onMouseEnterCallback, selecte
             {showInfo &&
                 infoEntries.map(([key, value]) => {
                     const shouldRender =
-                        value.type === "body" || (value.size <= bodySize && value.typeOfCreature === typeOfCreature);
+                        value.type === "body" || (value.size <= bodySize && (value.typeOfCreature === typeOfCreature || value.typeOfCreature === "any"));
                     return (
                         shouldRender && (
                             <div className="info__unit-life-unit" key={key}>
@@ -50,7 +50,7 @@ function InfoUnitLifeCreation({ title, infoObject, onMouseEnterCallback, selecte
                                             {Object.entries(fillTooltip(value, selectedPropsCreatingElements)).map(
                                                 ([key, value]) => (
                                                     <div key={key}>
-                                                        {textLoc[key]} {typeof value === "number" ? value : textLoc[value]}
+                                                        {key !== "name" ? textLoc[key] : null} {typeof value === "number" ? value : textLoc[value]}
                                                     </div>
                                                 )
                                             )}
