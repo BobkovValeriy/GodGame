@@ -37,7 +37,7 @@ const ButtonWithInfo = ({ buttonImage,
             onClick={buttonEvent}
             style={styled}
         >
-            {buttonImage}
+            {<div className='button-image'>{buttonImage}</div>}
             {!onMouseEnterCallback && showTooltip && <div className="tooltip">{tooltipText}</div>}
         </div>
     );

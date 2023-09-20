@@ -1,5 +1,5 @@
 import React from "react";
-import { changeLifeCreationMenuVisible } from "../../../../store/lifeCreationReducer";
+import { changeLifeCreationMenuVisible } from "../../../../store/player/playerReducer";
 import { GiDna2 } from "react-icons/gi"
 import "./CreateLife.scss"
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +7,7 @@ import { gameStop } from "../../../../store/gameRunReducer";
 
 function CreateLifeBtn() {
     const dispatch = useDispatch();
-    const showLifeCreation = useSelector(state => state.lifeCreationReducer.showLifeCreationMenu);
+    const showLifeCreation = useSelector(state => state.playerReducer.showLifeCreationMenu);
 
     function showLifeCreationMenu() {
         dispatch(gameStop());
