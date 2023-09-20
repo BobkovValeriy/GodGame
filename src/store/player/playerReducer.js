@@ -10,42 +10,90 @@ const playerReducer = createSlice({
         showAstral: false,
         showLifeCreationMenu: false,
         playerAstralConstructionLimits: 3,
+        playerAstralConstructionCardSlots: {
+            1: {},
+            2: {},
+            3: {},
+        },
         playerName: '',
         playerPass: '',
     },
     reducers: {
         playerNameChange(state, action) {
-            state.playerName = action.payload;
+            return {
+                ...state,
+                playerName: action.payload,
+            };
         },
         playerPassChange(state, action) {
-            state.playerPass = action.payload;
+            return {
+                ...state,
+                playerPass: action.payload,
+            };
         },
         changeGreatingTrue(state, action) {
-            state.showGreating = true;
+            return {
+                ...state,
+                showGreating: true,
+            };
         },
         changeGreatingFalse(state, action) {
-            state.showGreating = false;
+            return {
+                ...state,
+                showGreating: false,
+            };
         },
         playerRegistrationShowTrue(state, action) {
-            state.showPlayerRegistration = true;
+            return {
+                ...state,
+                showPlayerRegistration: true,
+            };
         },
         playerRegistrationShowFalse(state, action) {
-            state.showPlayerRegistration = false;
+            return {
+                ...state,
+                showPlayerRegistration: false,
+            };
         },
         changePlayerLoginTrue(state, action) {
-            state.showPlayerLogin = true;
+            return {
+                ...state,
+                showPlayerLogin: true,
+            };
         },
         changePlayerLoginFalse(state, action) {
-            state.showPlayerLogin = false;
+            return {
+                ...state,
+                showPlayerLogin: false,
+            };
         },
         logined(state, action) {
-            state.playerLogined = true;
+            return {
+                ...state,
+                playerLogined: true,
+            };
         },
         changeLifeCreationMenuVisible(state, action) {
-            state.showLifeCreationMenu = !state.showLifeCreationMenu
+            return {
+                ...state,
+                showLifeCreationMenu: !state.showLifeCreationMenu,
+            };
         },
         changeAstralVisible(state, action) {
-            state.showAstral = !state.showAstral
+            return {
+                ...state,
+                showAstral: !state.showAstral,
+            };
+        },
+        changePlayerAstralConstructionLimits(state, action) {
+            const changeAmount = action.payload;
+            const newConstructionLimits = state.playerAstralConstructionLimits + changeAmount;
+            const newState = {
+                ...state,
+                playerAstralConstructionLimits: newConstructionLimits,
+            };
+
+            return newState;
         }
     }
 });
@@ -60,6 +108,7 @@ export const {
     changePlayerLoginTrue,
     changePlayerLoginFalse,
     changeLifeCreationMenuVisible,
+    changePlayerAstralConstructionLimits,
     changeAstralVisible,
     logined,
 } = playerReducer.actions;

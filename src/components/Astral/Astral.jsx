@@ -9,6 +9,7 @@ import "./Astral.scss"
 
 function Astral() {
     const dispatch = useDispatch();
+    const buildCardsAmount = useSelector(state => state.playerReducer.playerAstralConstructionLimits);
     const exitButtonStyle = {
         width: "50px",
         height: "50px"
