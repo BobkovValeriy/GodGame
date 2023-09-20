@@ -12,7 +12,10 @@
   justify-content: center;
   cursor: pointer;
 }
-
+.button-image{
+  background-size: cover; /* Изображение будет растянуто и ужато, чтобы заполнить контейнер */
+  background-position: center;
+}
 .tooltip {
     margin: 0 10px;
     position: absolute;

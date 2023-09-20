@@ -7,8 +7,9 @@ const playerReducer = createSlice({
         showPlayerRegistration: false,
         showPlayerLogin: false,
         playerLogined: false,
-        showLifeCreation: false,
         showAstral: false,
+        showLifeCreationMenu: false,
+        playerAstralConstructionLimits: 3,
         playerName: '',
         playerPass: '',
     },
@@ -40,6 +41,12 @@ const playerReducer = createSlice({
         logined(state, action) {
             state.playerLogined = true;
         },
+        changeLifeCreationMenuVisible(state, action) {
+            state.showLifeCreationMenu = !state.showLifeCreationMenu
+        },
+        changeAstralVisible(state, action) {
+            state.showAstral = !state.showAstral
+        }
     }
 });
 
@@ -52,6 +59,8 @@ export const {
     playerRegistrationShowFalse,
     changePlayerLoginTrue,
     changePlayerLoginFalse,
+    changeLifeCreationMenuVisible,
+    changeAstralVisible,
     logined,
 } = playerReducer.actions;
 
