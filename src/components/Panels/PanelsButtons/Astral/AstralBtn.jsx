@@ -1,12 +1,12 @@
 import React from "react";
-import { changeAstralVisible } from "../../../../store/astralReducer";
+import { changeAstralVisible } from "../../../../store/player/playerReducer";
 import { gameStop } from "../../../../store/gameRunReducer";
 import { GiGalaxy } from "react-icons/gi"
 import "./AstralBtn.scss"
 import { useSelector, useDispatch } from "react-redux";
 
 function AstralBtn() {
-    const lookAstral = useSelector(state => state.astralReducer.astralStatus);
+    const lookAstral = useSelector(state => state.playerReducer.showAstral);
     const dispatch = useDispatch();
 
     function showAstral() {

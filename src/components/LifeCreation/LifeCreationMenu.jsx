@@ -3,7 +3,7 @@ import { RiArrowGoBackLine } from "react-icons/ri";
 import { BsDownload, BsUpload } from "react-icons/bs";
 import { MdNaturePeople } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { changeLifeCreationMenuVisible } from "../../store/lifeCreationReducer";
+import { changeLifeCreationMenuVisible } from "../../store/player/playerReducer";
 import './LifeCreation.scss'
 import { useTexts } from "../../locales/langagueSwitch";
 import ButtonWithInfo from "../Panels/infoButton/ButtonWithInfo";

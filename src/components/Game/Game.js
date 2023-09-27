@@ -14,9 +14,9 @@ import LifeCreationMenu from '../LifeCreation/LifeCreationMenu'
 
 function Game(playerEnergy) {
     const playerName = useSelector(state => state.playerReducer.name);
-    const astralVisible = useSelector(state => state.astralReducer.astralStatus)
+    const astralVisible = useSelector(state => state.playerReducer.showAstral)
     const menuVisible = useSelector(state => state.menu.menuStatus);
-    const showLifeCreation = useSelector(state => state.lifeCreationReducer.showLifeCreationMenu);
+    const showLifeCreation = useSelector(state => state.playerReducer.showLifeCreationMenu);
 
 
     return (
