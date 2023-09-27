@@ -28,7 +28,8 @@ function App() {
       {showRegistration && <PlayerRegistration />}
       {showPlayerLogin && <PlayerLogin />}
       {playerLogined && <Game playerEnergy={playerEnergy} changePlayerEnergy={changePlayerEnergy} />} */}
-      <Game playerEnergy={playerEnergy} changePlayerEnergy={changePlayerEnergy} />{/*Временное ограничение функциональности 
+      <Game playerEnergy={playerEnergy} changePlayerEnergy={changePlayerEnergy} />
+      {/*Временное ограничение функциональности 
       входа, для упрощения тестировки в финальной версии удалить эту строку и раскоментировать остальное. */}
     </div>
   );

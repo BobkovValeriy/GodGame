@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function LifeCreationBar({ color, num, bodyPartData, updateCreature, type, currentBodyParts, changeCurrentBodyParts }) {
+function LifeCreationBar({ color, num, bodyPartData, type, currentBodyParts, changeCurrentBodyParts }) {
     const barStyle = {
         backgroundColor: color
     };
@@ -11,13 +11,12 @@ function LifeCreationBar({ color, num, bodyPartData, updateCreature, type, curre
     function onDropHandler(part) {
         if (currentPart) {
             const existingPartIndex = currentBodyParts.findIndex(
-                (existingPart) => existingPart.name === part.name
+                (existingPart) => existingPart.name === currentPart.name
             );;
             changeCurrentBodyParts((prevBodyParts) => [
                 ...prevBodyParts.slice(0, existingPartIndex),
                 ...prevBodyParts.slice(existingPartIndex + 1)])
         }
-        updateCreature(part)
         changeCurrentPart(part)
         changeCurrentBodyParts((prevBodyParts) => [...prevBodyParts, part])
         changeMinImage(part.minImage)

@@ -8,10 +8,11 @@ const lifeFormDetailsReducer = createSlice({
     initialState: {
         bodies: {
             archaea: {
+                name: "archaea", // Археи
                 type: "body",
                 size: 1,
-                cost: 30,
-                name: "archaea", // Археи
+                bodyPartCost: 30,
+                bodyPartStrength: 1,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -24,10 +25,11 @@ const lifeFormDetailsReducer = createSlice({
                 typeOfCreature: "cellCreature",
             },
             eucariot: {
+                name: "eucariot", // эукариот
                 type: "body",
                 size: 1,
-                cost: 60,
-                name: "eucariot", // эукариот
+                bodyPartCost: 60,
+                bodyPartStrength: 2,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -39,10 +41,11 @@ const lifeFormDetailsReducer = createSlice({
                 typeOfCreature: "cellCreature",
             },
             procariot: {
+                name: "procariot", // прокариот
                 type: "body",
                 size: 2,
-                cost: 30,
-                name: "procariot", // прокариот
+                bodyPartCost: 30,
+                bodyPartStrength: 3,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -55,10 +58,11 @@ const lifeFormDetailsReducer = createSlice({
                 typeOfCreature: "cellCreature",
             },
             smallMicroorganism: {
+                name: "smallMicroorganism", // Малый микроорганизм
                 type: "body",
                 size: 2,
-                cost: 120,
-                name: "smallMicroorganism", // Микроорганизм
+                bodyPartCost: 120,
+                bodyPartStrength: 4,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -70,10 +74,11 @@ const lifeFormDetailsReducer = createSlice({
                 typeOfCreature: "cellCreature",
             },
             microorganism: {
+                name: "microorganism", // Микроорганизм
                 type: "body",
                 size: 3,
-                cost: 120,
-                name: "microorganism", // Микроорганизм
+                bodyPartCost: 120,
+                bodyPartStrength: 5,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -85,10 +90,11 @@ const lifeFormDetailsReducer = createSlice({
                 typeOfCreature: "manyCellCreature",
             },
             bigMicroorganism: {
+                name: "bigMicroorganism", // Большой микроорганизм
                 type: "body",
                 size: 4,
-                cost: 120,
-                name: "bigMicroorganism", // Микроорганизм
+                bodyPartCost: 120,
+                bodyPartStrength: 10,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -100,10 +106,11 @@ const lifeFormDetailsReducer = createSlice({
                 typeOfCreature: "manyCellCreature",
             },
             smallCreature: {
+                name: "smallCreature", // Маленькое существо
                 type: "body",
                 size: 5,
-                cost: 100,
-                name: "smallCreature", // Маленькое существо
+                bodyPartStrength: 25,
+                bodyPartCost: 100,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -115,10 +122,11 @@ const lifeFormDetailsReducer = createSlice({
                 typeOfCreature: "manyCellCreature",
             },
             mediumCreature: {
+                name: "mediumCreature", // Среднее существо
                 type: "body",
                 size: 6,
-                cost: 150,
-                name: "mediumCreature", // Среднее существо
+                bodyPartStrength: 50,
+                bodyPartCost: 150,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -130,10 +138,11 @@ const lifeFormDetailsReducer = createSlice({
                 typeOfCreature: "manyCellCreature",
             },
             largeCreature: {
+                name: "largeCreature", // Крупное существо
                 type: "body",
                 size: 7,
-                cost: 250,
-                name: "largeCreature", // Крупное существо
+                bodyPartStrength: 100,
+                bodyPartCost: 250,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -145,10 +154,11 @@ const lifeFormDetailsReducer = createSlice({
                 typeOfCreature: "manyCellCreature",
             },
             megaCreature: {
+                name: "megaCreature", // мега существо
                 type: "body",
                 size: 8,
-                cost: 250,
-                name: "megaCreature", // мега существо
+                bodyPartStrength: 1000,
+                bodyPartCost: 250,
                 avaliableBodyParts: {
                     shells: 1,
                     foodIntakeSystem: 1,
@@ -162,56 +172,56 @@ const lifeFormDetailsReducer = createSlice({
         },
         shells: {
             shellA: {
+                name: "archeaShell", // Оболочка Aрхеи
                 type: "shells",
-                cost: 5000,
-                name: "shellA", // Оболочка A
+                bodyPartCost: 5000,
                 minTemperature: -128,
                 maxTemperature: 350,
-                strength: 2,
+                bodyPartStrength: 2,
                 minImage: null,
                 typeOfCreature: "cellCreature",
                 size: 1,
             },
             shellB: {
-                type: "shells",
-                cost: 70,
                 name: "shellB", // Оболочка B
+                type: "shells",
+                bodyPartCost: 70,
                 minTemperature: -18,
                 maxTemperature: 50,
-                strength: 3,
+                bodyPartStrength: 3,
                 minImage: null,
                 typeOfCreature: "cellCreature",
                 size: 1,
             },
             shellC: {
-                type: "shells",
-                cost: 100,
                 name: "shellC", // Оболочка C
+                type: "shells",
+                bodyPartCost: 100,
                 minTemperature: -18,
                 maxTemperature: 50,
-                strength: 5,
+                bodyPartStrength: 5,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 3,
             },
             shellD: {
-                type: "shells",
-                cost: 130,
                 name: "shellD", // Оболочка D
+                type: "shells",
+                bodyPartCost: 130,
                 minTemperature: -30,
                 maxTemperature: 50,
-                strength: 7,
+                bodyPartStrength: 7,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 3,
             },
             shellE: {
-                type: "shells",
-                cost: 180,
                 name: "shellE", // Оболочка E
+                type: "shells",
+                bodyPartCost: 180,
                 minTemperature: 0,
                 maxTemperature: 30,
-                strength: 10,
+                bodyPartStrength: 10,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 4,
@@ -219,37 +229,38 @@ const lifeFormDetailsReducer = createSlice({
         },
         foodIntakeSystem: {
             proboscis: {
-                type: "foodIntakeSystem",
-                cost: 10,
                 name: "proboscis", // Жгутик
-                strength: 2,
+                type: "foodIntakeSystem",
+                bodyPartCost: 10,
+                name: "proboscis", // Жгутик
+                bodyPartStrength: 2,
                 minImage: null,
                 typeOfCreature: "cellCreature",
                 size: 1,
             },
             mouth: {
-                type: "foodIntakeSystem",
-                cost: 40,
                 name: "mouth", // Рот
-                strength: 3,
+                type: "foodIntakeSystem",
+                bodyPartCost: 40,
+                bodyPartStrength: 3,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 4,
             },
             beak: {
-                type: "foodIntakeSystem",
-                cost: 80,
                 name: "beak", // Клюв
-                strength: 3,
+                type: "foodIntakeSystem",
+                bodyPartCost: 80,
+                bodyPartStrength: 3,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 3,
             },
             tentacles: {
-                type: "foodIntakeSystem",
-                cost: 60,
                 name: "tentacles", // Щупальца
-                strength: 4,
+                type: "foodIntakeSystem",
+                bodyPartCost: 60,
+                bodyPartStrength: 4,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 2,
@@ -260,55 +271,61 @@ const lifeFormDetailsReducer = createSlice({
         },
         reproductionSystem: {
             binaryFission: {
-                type: "reproductionSystem",
-                cost: 10,
                 name: "binaryFission",
+                type: "reproductionSystem",
+                bodyPartCost: 10,
                 reproductionSpeed: 1000,
+                bodyPartStrength: 1,
                 minImage: null,
                 typeOfCreature: "cellCreature",
                 size: 1,
             },
             budding: {
-                type: "reproductionSystem",
-                cost: 100,
                 name: "budding",
+                type: "reproductionSystem",
+                bodyPartCost: 100,
                 reproductionSpeed: 200,
+                bodyPartStrength: 2,
                 minImage: null,
                 typeOfCreature: "cellCreature",
                 size: 2,
             },
             fragmentation: {
-                type: "reproductionSystem",
-                cost: 200,
                 name: "fragmentation",
+                type: "reproductionSystem",
+                bodyPartCost: 200,
                 reproductionSpeed: 4,
+                bodyPartStrength: 5,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 3,
             },
             parthenogenesis: {
-                type: "reproductionSystem",
-                cost: 300,
                 name: "parthenogenesis",
+                type: "reproductionSystem",
+                bodyPartCost: 300,
                 reproductionSpeed: 300,
+                bodyPartStrength: 3,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 4,
             },
             vegetativePropagation: {
-                type: "reproductionSystem",
-                cost: 500,
                 name: "vegetativePropagation",
+                type: "reproductionSystem",
+                bodyPartCost: 500,
                 reproductionSpeed: 100,
+                bodyPartStrength: 20,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 4,
             },
             sexualReproduction: {
-                type: "reproductionSystem",
-                cost: 1000,
                 name: "sexualReproduction",
+                type: "reproductionSystem",
+                bodyPartCost: 1000,
                 reproductionSpeed: 1,
+                bodyPartStrength: 100,
                 minImage: null,
                 typeOfCreature: "manyCellCreature",
                 size: 5,
@@ -316,53 +333,107 @@ const lifeFormDetailsReducer = createSlice({
 
         },
         metabolicSystem: {
-            binaryFission: {
-                type: "reproductionSystem",
-                cost: 10,
-                name: "binaryFission",
-                reproductionSpeed: 1000,
+            greenHouseGasProduction: {
+                name: "greenHouseGasProduction",
+                type: "metabolicSystem",
+                creatureConsume: {
+                    soil: 0,
+                },
+                creatureProduce: {
+                    greenhouseGas: 1,
+                },
+                bodyPartCost: 1,
                 minImage: null,
-                typeOfCreature: "cellCreature",
+                typeOfCreature: "any",
                 size: 1,
-            },/// временная заглушка
+                bonuce: "greenHouseGasBonuce"
+            },
+            staticBioMassProduction: {
+                name: "bioMassProduction",
+                type: "metabolicSystem",
+                creatureConsume: {
+                    soil: 0,
+                },
+                creatureProduce: {
+                    staticBioMass: 1,
+                },
+                bodyPartCost: 1,
+                minImage: null,
+                typeOfCreature: "any",
+                size: 1,
+                bonuce: "bioMassProductionBonuce"
+            },
+            activeBioMassProduction: {
+                name: "activeBioMassProduction",
+                type: "metabolicSystem",
+                creatureConsume: {
+                    staticBioMass: 2,
+                },
+                creatureProduce: {
+                    activeBioMass: 1,
+                    staticBioMass: 1,
+                },
+                bodyPartCost: 100,
+                minImage: null,
+                typeOfCreature: "any",
+                size: 2,
+                bonuce: "activeBioMassProductionBonuce"
+            },
+            reconversionToStaticBioMass: {
+                name: "reconversionToStaticBioMass",
+                type: "metabolicSystem",
+                creatureConsume: {
+                    staticBioMass: 3,
+                },
+                creatureProduce: {
+                    bioEnergy: 1,
+                    staticBioMass: 1,
+                    activeBioMass: 1,
+                },
+                bodyPartCost: 100,
+                minImage: null,
+                typeOfCreature: "any",
+                size: 2,
+                bonuce: "activeBioMassProductionBonuce"
+            },
         },
         locomotorSystem: {
             legs: {
-                type: "locomotorSystem",
-                cost: 80,
                 name: "legs", // Ноги
-                strength: 4,
+                type: "locomotorSystem",
+                bodyPartCost: 80,
+                bodyPartStrength: 4,
                 minImage: leg,
-                speed: 3,
+                creatureSpeed: 3,
                 size: 4,
                 typeOfCreature: "manyCellCreature",
             },
             wings: {
-                type: "locomotorSystem",
-                cost: 100,
                 name: "wings", // Крылья
-                strength: 3,
-                speed: 4,
+                type: "locomotorSystem",
+                bodyPartCost: 100,
+                bodyPartStrength: 3,
+                creatureSpeed: 4,
                 size: 4,
                 typeOfCreature: "manyCellCreature",
             },
             vibrissae: {
-                type: "locomotorSystem",
-                cost: 120,
                 name: "vibrissae", // Вибриссы
-                strength: 1,
-                speed: 1,
+                type: "locomotorSystem",
+                bodyPartCost: 120,
+                bodyPartStrength: 1,
+                creatureSpeed: 1,
                 size: 1,
                 typeOfCreature: "cellCreature",
                 visualImage: vibriss,
                 minImage: vibriss,
             },
             tentacles: {
-                type: "locomotorSystem",
-                cost: 140,
                 name: "tentacles", // Щупальца
-                strength: 10,
-                speed: 2,
+                type: "locomotorSystem",
+                bodyPartCost: 140,
+                bodyPartStrength: 10,
+                creatureSpeed: 2,
                 size: 3,
                 typeOfCreature: "cellCreature",
             },

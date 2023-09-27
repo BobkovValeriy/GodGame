@@ -33,8 +33,13 @@ export const ru = {
     loadLifeForm: "Ранее созданные формы жизни",
     saveLifeForm: "Сохранить форму жизни",
     settleLifeForm: "Поселить форму жизни",
-    strength: "конкурентное преимущество",
-    cost: "стоимость",
+    bodyPartStrength: "Конкурентное преимуществочасти тела:",
+    creatureStrength: "Конкурентное преимущество существа:",
+    bodyPartCost: "Стоимость части тела:",
+    creatureCost: "Стоимость заселения существа:",
+    creatureSpeed: "Скорость существа:",
+    reproductionSpeed: "Cкорость размножения:",
+    nameOfCreature: "Название существа: ",
     lifeFormSummary: "планируемые свойства существа",
 
     bodies: "типы тел",
@@ -51,7 +56,7 @@ export const ru = {
     megaCreature: "мега создание",
 
     shells: "внешние оболочки",
-    shellA: "оболочка A",
+    archeaShell: "оболчка археи",
     shellB: "оболочка B",
     shellC: "оболочка C",
     shellD: "оболочка D",
@@ -76,13 +81,30 @@ export const ru = {
     sexualReproduction: "Сексуальное размножение",
 
     metabolicSystem: "система метаболизма",
-
+    creatureConsume: "Тип питания существа",
+    creatureProduce: "Биопродукция существа",
+    greenHouseGasProduction: "Газогенерация",
+    bioMassProduction: "Генерация биомассы",
+    activeBioMassProduction: "Генерация активной биомассы",
+    reconversionToStaticBioMass: "Генерация биотоков",
+    greenhouseGas: "Парниковые газы",
+    soil: "Почвы",
+    staticBioMass: "Малоподвижная биомасса",
+    activeBioMass: "Мобильная биомасса",
+    bioEnergy: "Биотоки",
 
     locomotorSystem: "двигательная система",
     legs: "ноги",
     wings: "крылья",
     vibrissae: "вибриссы",
-    appendages: "аппендицит"
+    appendages: "аппендицит",
 
+    lifeCreationDontSave: "Больше нет места в архивах пруда порождения, пожалуйста удалите ненужных вам существ",
+    lifeCreationSaved: "Форма жизни сохранена",
+    pleaseEnterCreatureName: "Существу нужно имя, не оставляйте его без посмертия",
+    pleaseSelectCreatureBody: "К сожалению в физическом мире невозможно существовать без тела повелитель, пожалуйста выберите тело для существа.",
+    pleaseDontJokeItsToohardTospeak: "Повелитель! К сожалению я не смогу такое выговорить. Сделайте пожалуйста имя покороче, к примеру меньше 16 символов.",
+    pleaseDontJokeItsToohardTospeakSymbols: "Повелитель! К сожалению, я не смогу такое выговорить. Пожалуйста, используйте имя, которое не содержит специальных символов, начинается не с '-' или '_'.",
+    nameMustBeUnique: "Владыка! Существа с одинаковыми именами не смогут найти своё личное посмертие, пожалуйста придумайте новое имя. Или же позвольте мне уничтожить запись в архивах пруда порождения.",
     // конструктор форм жизни конец
 }

@@ -17,6 +17,9 @@ const playerReducer = createSlice({
         },
         playerName: '',
         playerPass: '',
+        maxPlayerCreatures: 3,
+        canAddCreature: true,
+        playerCreatures: [],
     },
     reducers: {
         playerNameChange(state, action) {
@@ -67,6 +70,17 @@ const playerReducer = createSlice({
                 showPlayerLogin: false,
             };
         },
+        maxPlayerCreaturesAdd(state, action) {
+            state.maxPlayerCreatures += action.payload
+        },
+        savePlayerCreatures(state, action) {
+            const max = state.playerCreatures.length - 1
+            if (state.maxPlayerCreatures > max) {
+                state.playerCreatures.push(action.payload)
+            } else {
+                state.canAddCreature = false
+            }
+        },
         logined(state, action) {
             return {
                 ...state,
@@ -110,6 +124,7 @@ export const {
     changeLifeCreationMenuVisible,
     changePlayerAstralConstructionLimits,
     changeAstralVisible,
+    savePlayerCreatures,
     logined,
 } = playerReducer.actions;
 
