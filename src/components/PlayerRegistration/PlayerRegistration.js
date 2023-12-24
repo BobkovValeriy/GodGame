@@ -12,7 +12,6 @@ import {
     changeGreatingFalse,
     changePlayerLoginFalse,
 } from "../../store/player/playerReducer";
-import { energyConsumptionChange } from "../../store/player/energyReducer";
 import { useTexts } from "../../locales/langagueSwitch";
 import { initStartingTerraPlanetoid } from "../../store/planetoid/planetoidReducer";
 
