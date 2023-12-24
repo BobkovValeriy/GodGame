@@ -232,7 +232,6 @@ const lifeFormDetailsReducer = createSlice({
                 name: "proboscis", // Жгутик
                 type: "foodIntakeSystem",
                 bodyPartCost: 10,
-                name: "proboscis", // Жгутик
                 bodyPartStrength: 2,
                 minImage: null,
                 typeOfCreature: "cellCreature",

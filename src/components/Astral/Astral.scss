@@ -11,7 +11,7 @@ html, body, #root {
     bottom: 0;
     left: 0;
     background-color: rgba(37, 60, 162, 0.5);
-    z-index: 9999;
+    z-index: 90;
 }
 .astral-field{
     width: 80%;
@@ -36,24 +36,117 @@ html, body, #root {
     cursor: pointer;
 }
 .astral-entity-info{
-    flex: 0 1 100px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    margin: 4% 1% 2% 1%;
+    height: 10%;
+    width: 90%;
+    background-color: #B299B7;
+    padding: 10px 0 0 10px;
+    border-radius: 6px;
+    overflow-y: scroll;
 }
-.astral-construction-field{
+
+.astral-construction-field-wrapper {
     flex: 1 1 auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    position: relative;
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+.scallable-construction-field{
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+    transform: perspective(1000px) rotateX(30deg);
+    overflow: scroll;
+    user-select: none;
+    margin: 0 10px;
+    border-radius: 30px;
+}
+.astral-construction-field{
+    // position: relative;
+    // flex: 1 1 auto;
+    width: 100%;
+    // transform: perspective(1000px) rotateX(30deg);
+    // overflow: scroll;
+    // user-select: none;
+    // margin: 0 10px;
+    // border-radius: 30px;
+    height: 100%;
+}
+.astral-construction-field-left-border{
+    flex: 0 1 auto;
+    width: 200px;
+}
+.astral-construction-field-right-border{
+    flex: 0 1 auto;
+    width: 200px;
 }
 .astral-entity-bar{
     display: flex;
-    flex: 0 1 100px;
+    flex: 0 0 100px;
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+.build-card{
+    height: 200px;
+    width: 300px;
+    margin-left: 10px;
+    flex: 0 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5e5373;
+}
+.building-description{
+    overflow: auto;
+}
+.building-image{
+    height: 40px;
+    width: 40px;
+}
+.build-name{
+    font-size: large;
+    color: black;
+}
+.build-modiffer{
+    flex: 1 1 auto
+}
+.build-place{
+    cursor: pointer;
+    position: absolute;
+    border-radius: 40px;
+    overflow: hidden;
+}
+.buy-place{
+    cursor: pointer;
+    position: absolute;
+    border-radius: 40px;
+    overflow: hidden;
+}
+// ScrollBar invisible
+.astral-construction-field::-webkit-scrollbar {
+    width: 0; /* Ширина вертикальной полосы прокрутки */
+}
+
+.astral-construction-field::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Цвет полосы прокрутки */
+}
+
+.astral-construction-field::-webkit-scrollbar-track {
+    background-color: transparent; /* Цвет фона полосы прокрутки */
+}
+  /* Для Firefox */
+.astral-construction-field {
+    scrollbar-width: thin; /* Ширина вертикальной полосы прокрутки */
+}
+
+.astral-construction-field::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Цвет полосы прокрутки */
+}
+
+.astral-construction-field::-webkit-scrollbar-track {
+    background-color: transparent; /* Цвет фона полосы прокрутки */
 }

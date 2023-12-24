@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { nextDay } from '../../store/dateReduser';
+import { nextDay } from '../../store/player/playerReducer';
 import { changeGameRunStatus, changeGameSpeedUp, changeGameSpeedDown, changeGameSpeedRunning } from '../../store/gameRunReducer';
 import { useEffect, useRef } from 'react';
 

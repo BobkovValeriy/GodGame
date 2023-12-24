@@ -35,7 +35,7 @@ function LifeCreationBar({ color, num, bodyPartData, type, currentBodyParts, cha
                     style={barStyle}
                     onDrop={(e) => onDropHandler(bodyPartData)}
                     onDragOver={(e) => onDragOverHandler(e, bodyPartData)}
-                >{minImage ? <img src={minImage} alt="Min Image" className="bar-min-image" /> : null}</span>
+                >{minImage ? <image src={minImage} alt="Min Image" className="bar-min-image" /> : null}</span>
             ))}
         </span>
     );

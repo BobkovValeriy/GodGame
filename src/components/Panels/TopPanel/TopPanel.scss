@@ -1,4 +1,6 @@
 .panel-top {
+    position: relative;
+    z-index: 1000;
 }
 .panel__top-resources{
     margin: 0px auto;
